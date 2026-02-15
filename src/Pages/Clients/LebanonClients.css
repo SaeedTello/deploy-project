@@ -1,0 +1,49 @@
+.clients-header {
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.clients-container {
+  padding: 24px;
+  background: linear-gradient(to bottom, #d5d5d528, #d1d1d156);
+}
+
+@media (max-width: 1200px) {
+ .clients-cards {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1046px) {
+  .clients-header {
+  top: 27%;
+}
+}
+
+@media (max-width: 950px) {
+  .clients-header {
+    top: 18%;
+  }
+}
+
+@media (max-width: 770px) {
+  .clients-header {
+    top: 19%;
+  }
+}
+
+@media (max-width: 530px) {
+  .clients-header {
+    top: 14%;
+  }
+  
+}
+@media (max-width: 435px) {
+  .clients-header {
+    top: 12%;
+  }
+}

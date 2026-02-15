@@ -13,7 +13,7 @@
 
 .services-header {
   position: absolute;
-  top: 43%;
+  top: 45%;
   left: 50%;
   z-index: 100;
   transform: translate(-50%, -50%);
@@ -46,7 +46,7 @@
 
 @media (max-width: 1046px) {
   .services-header {
-  top: 37%;
+  top: 20%;
 }
 }
 
@@ -56,15 +56,15 @@
   }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 710px) {
   .services-header {
-    top: 20%;
+    top: 13%;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 495px) {
   .services-header {
-    top: 17%;
+    top: 10%;
   }
   
 }

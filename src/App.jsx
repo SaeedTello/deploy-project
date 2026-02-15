@@ -4,10 +4,10 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import {
   Home,
   AboutUs,
-  Clients,
-  ClientDetail,
+  LebanonClients,
   ContactUs,
   Services,
+  ServiceDetail,
   Events,
   News,
   NewsDetail,
@@ -24,9 +24,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/clients" element={<Clients />} />
-          <Route path="/client/:id" element={<ClientDetail />} />
+          <Route path="/clients" element={<LebanonClients />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:id" element={<ServiceDetail />} />
           <Route path="/events" element={<Events />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:id" element={<NewsDetail />} />

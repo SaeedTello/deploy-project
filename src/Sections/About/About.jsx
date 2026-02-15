@@ -7,26 +7,18 @@ export default function About() {
     <>
       <div className=" container py-5">
         <div className=" d-flex row">
-          <div className=" col-lg-6 col-md-6 col-sm-6">
-            <h1 className="titleAbout">
-              <span className="About">About</span> LINE IN
-            </h1>
+          <div className="mainAbout col-lg-6 col-md-6 col-sm-6">
+            <h1 className="titleAbout fw-bold">
+              <span className="About"> من</span> نحن            </h1>
             <p className="p-1">
-              We provide solutions that would alleviate unnecessary community
-              stress arising due to the lack of parking, traffic and congested
-              streets.
-            </p>
-            <p className="p-2">
-              Our Mission is to be the market leader in the provision of
-              World-Class comprehensive and fully integrated parking management
-              solutions and services.
+              تعمل شركة  Line Inعلى تقديم حلول ذكية وعملية لمعالجة مشكلة نقص مواقف السيارات والازدحام المروري. نركّز على تطوير أنظمة وخدمات تساهم في تحسين الحركة وتنظيم استخدام الأماكن العامة، بما ينعكس إيجابًا على المجتمع والأعمال.
             </p>
             <Link
               to="/about"
               className="btn-About border-0 rounded-1 px-2 py-1 text-white"
               style={{ textDecoration: "none", display: "inline-block" }}
             >
-              MORE INFO
+              عرض المزيد
             </Link>
           </div>
           <div className="About-img col-lg-6 col-md-6 col-sm-6">

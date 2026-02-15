@@ -2,15 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./NavBar.css";
 import LogoNav from "../../assets/img/Logo/white.webp";
 
-// استيراد جميع صور الخلفيات
 import homeBg from "../../assets/img/Home/PG/PG_NavBar.webp";
 import clientsBg from "../../assets/img/Lebanon_Clients/1.webp";
 import servicesBg from "../../assets/img/Services/1.webp";
 import contactsBg from "../../assets/img/Contact_Us/1.webp";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { getCountriesList } from "../../data/clientsData";
+import { Link, useLocation } from "react-router-dom";
 
-// خريطة الصفحات والصور والألوان
 const backgroundImages = {
   "/": homeBg,
   home: homeBg,
@@ -31,16 +28,7 @@ const backgroundImages = {
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   const [backgroundImage, setBackgroundImage] = useState(homeBg);
-  const [clientsDropdownOpen, setClientsDropdownOpen] = useState(false);
-  const [countries, setCountries] = useState([]);
   const location = useLocation();
-  const navigate = useNavigate();
-
-  // تحميل قائمة الدول
-  useEffect(() => {
-    const countriesList = getCountriesList();
-    setCountries(countriesList);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -49,15 +37,11 @@ export default function NavBar() {
     };
   }, [open]);
 
-  // تحديث الصورة بناءً على المسار الحالي
   useEffect(() => {
     const pathname = location.pathname;
-
-    // استخراج المسار الرئيسي (مثل "news" من "/news/1")
     const pathSegments = pathname.split("/").filter(Boolean);
     const mainRoute = pathSegments[0];
 
-    // البحث عن الصورة المناسبة
     let selectedImage = homeBg;
 
     if (pathname === "/") {
@@ -87,12 +71,6 @@ export default function NavBar() {
     return "";
   };
 
-  const handleClientSelect = (countryKey) => {
-    navigate(`/clients?country=${countryKey}`);
-    setClientsDropdownOpen(false);
-    setOpen(false);
-  };
-
   return (
     <nav className="site-navbar">
       <div className="nav-container">
@@ -102,37 +80,6 @@ export default function NavBar() {
         <div className="navBar-button">
           <ul className={`nav-links ${open ? "open" : ""}`}>
             {links.map(([path, label]) => {
-              if (label === "CLIENTS") {
-                return (
-                  <li key={label} className="dropdown-container">
-                    <button
-                      className={`dropdown-toggle ${
-                        location.pathname === "/clients" ? "active" : ""
-                      }`}
-                      onClick={() =>
-                        setClientsDropdownOpen(!clientsDropdownOpen)
-                      }
-                    >
-                      {label}
-                      <span className="dropdown-arrow">▼</span>
-                    </button>
-                    {clientsDropdownOpen && (
-                      <div className="dropdown-menu">
-                        {countries.map((country) => (
-                          <button
-                            key={country.key}
-                            className="dropdown-item"
-                            onClick={() => handleClientSelect(country.key)}
-                          >
-                            {country.name}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </li>
-                );
-              }
-
               return (
                 <li key={label}>
                   <Link
