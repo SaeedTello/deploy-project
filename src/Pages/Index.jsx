@@ -9,5 +9,3 @@ export { default as Services } from "./Services/Services";
 export { default as ServiceDetail } from "./Services/ServiceDetail";
 export { default as ValetServices } from "./ValetServices/ValetServices";
 export { default as Vip } from "./Vip/Vip";
-export {default as AboutClients} from "./Clients/AllClients/AboutClients/AboutClients"
-export {default as Clients} from "./Clients/AllClients/ClientsNavbar/Clients"
