@@ -23,14 +23,14 @@ export default function App() {
         <NavBar />
         <Routes>
           <Route path="/deploy-project/" element={<Home />} />
-          <Route path="/deploy-project/about" element={<AboutUs />} />
-          <Route path="/deploy-project/clients" element={<LebanonClients />} />
-          <Route path="/deploy-project/services" element={<Services />} />
-          <Route path="/deploy-project/services/:id" element={<ServiceDetail />} />
-          <Route path="/deploy-project/events" element={<Events />} />
-          <Route path="/deploy-project/news" element={<News />} />
-          <Route path="/deploy-project/news/:id" element={<NewsDetail />} />
-          <Route path="/deploy-project/contacts" element={<ContactUs />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/clients" element={<LebanonClients />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:id" element={<ServiceDetail />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/:id" element={<NewsDetail />} />
+          <Route path="/contacts" element={<ContactUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>
