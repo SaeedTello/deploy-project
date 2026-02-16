@@ -8,3 +8,4 @@ export {default as LatestNews} from './LatestNews/LatestNews';
 export {default as NavBar} from './NavBar/NavBar';
 export {default as Portfolio} from './Portfolio/Portfolio';
 export {default as Services} from './Services/Services';
+export {default as HomeTitle} from './HomeTitle/HomeTitle'

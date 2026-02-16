@@ -1,0 +1,84 @@
+.home-title-container {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 110;
+  text-align: center;
+}
+
+.getInTouchBtn .btn-1 {
+    color: #D4AA83;
+    border: #D4AA83 solid 1px;
+    width: 60%;
+}
+.getInTouchBtn .btn-2 {
+    background-color: #D4AA83;
+    width: 40%;
+}
+
+.m-autoo {
+    margin: 1rem 0 ;
+}
+
+.btn:hover {
+    color: black;
+}
+@media screen and (max-width: 1500px) {
+  .home-title-container {
+  top: 18%;
+}
+}
+
+@media screen and (max-width: 1265px) {
+  .home-title-container {
+  top: 13%;
+}
+}
+
+@media screen and (max-width: 1034px) {
+  .home-title-container {
+  top: 3%;
+}
+}
+
+@media screen and (max-width: 820px) {
+  .home-title-container {
+  top: 0%;
+}
+}
+
+@media screen and (max-width: 500px) {
+  .home-title-container {
+    top: 1.5%;
+    width: 75%;
+    transform: translate(-50%, 30%);
+  }
+
+  .home-title-container h1 {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .home-title-container p {
+    font-size: 0.6rem;
+    line-height: 1.4;
+  }
+
+  .m-autoo {
+    margin: 0.55rem 0;
+  }
+
+  .getInTouchBtn {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .getInTouchBtn .btn-1,
+  .getInTouchBtn .btn-2 {
+    margin: 0 !important;
+    padding: 0.5rem 0.65rem !important;
+    font-size: 0.78rem;
+  }
+}

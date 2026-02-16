@@ -4,8 +4,7 @@ import {
   CEO,
   ContactUs,
   Details,
-  Footer,
-  Header,
+  HomeTitle,
   LatestNews,
   Portfolio,
   Services,
@@ -15,6 +14,7 @@ export default function Home() {
   return (
     <>
       <div className="home-page">
+        <HomeTitle />
         <Details />
         <About />
         <Services />
