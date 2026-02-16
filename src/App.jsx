@@ -23,6 +23,7 @@ export default function App() {
         <NavBar />
         <Routes>
           <Route path="/deploy-project/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/clients" element={<LebanonClients />} />
           <Route path="/services" element={<Services />} />
